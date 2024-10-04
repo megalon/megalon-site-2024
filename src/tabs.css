@@ -1,0 +1,16 @@
+#left .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(145, 145, 145);
+    margin-top: 1rem;
+}
+
+.tabs .hover {
+    color: #363636;
+    background-color: unset;
+}
+
+.tabs .is-active {
+    color: #363636;
+}

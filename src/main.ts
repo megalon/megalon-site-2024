@@ -1,4 +1,5 @@
 import './style.css'
+import './tabs.css'
 import './video.css'
 
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement

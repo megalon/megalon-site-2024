@@ -1,0 +1,31 @@
+.video-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "left-sidewall video right-sidewall";
+}
+
+.sidewall {
+    background-color: #bababa;
+}
+
+/* .sidewall.sinister-squeakers {
+    background-color: #131316;
+}
+
+.sidewall.frog-store {
+    background-color: #0c0f10;
+} */
+
+.sidewall.left {
+    grid-area: left-sidewall;
+}
+
+.sidewall.right {
+    grid-area: right-sidewall;
+}
+
+.video-to-contain {
+    grid-area: video;
+    max-height: 80vh;
+    min-height: 20em;
+}

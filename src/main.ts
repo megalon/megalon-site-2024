@@ -1,4 +1,5 @@
 import './style.css'
+import './video.css'
 
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
 const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list ul")

@@ -113,6 +113,7 @@ a {
 #projects-list ul li:nth-child(3) {
   width: 10%;
   text-align: right;
+  overflow-wrap: normal;
 }
 
 /* dark theme*/

@@ -5,20 +5,25 @@ import { delay } from './utils'
 
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
 const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list ul")
+const homeButtonDiv = document.querySelector<HTMLDivElement>(".home-button")
 
 window.addEventListener("hashchange", loadContentFromHash)
-window.addEventListener("load", loadContentFromHash)
+window.addEventListener("load", loadContent)
 
 async function loadContentFromHash() {
-  const page = window.location.hash.substring(1)
-
   contentDiv.style.opacity = "0"
-
   await delay(500)
+
+  loadContent()
+}
+
+async function loadContent() {
+  const page = window.location.hash.substring(1)
 
   if (!page) {
     console.log("No page selected")
     contentDiv.innerHTML = "hello, please select a project on the left"
+    contentDiv.style.opacity = "1"
     return
   }
 
@@ -54,4 +59,8 @@ projectsListItems.forEach(item => {
   item.addEventListener("mouseleave", async (event) => {
     item.classList.remove("hover")
   })
+})
+
+homeButtonDiv?.addEventListener("click", async (event) => {
+  window.location.hash = ""
 })

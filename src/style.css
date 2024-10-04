@@ -66,6 +66,10 @@ a {
   border-bottom: 0.1rem solid #000;
 }
 
+.home-button {
+  cursor: pointer;
+}
+
 .heading {
   display:flex;
   flex-direction: row;
@@ -100,6 +104,7 @@ a {
   padding-bottom: 1.8rem;
 
   list-style-type: none;
+  cursor: pointer;
 }
 
 #projects-list hr {

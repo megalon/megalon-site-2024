@@ -96,6 +96,10 @@ a {
   list-style-type: none;
 }
 
+.hover {
+  background-color: #c7c7c7;
+}
+
 #projects-list ul li:nth-child(1) {
   width: 60%;  
   padding-right: 1rem;

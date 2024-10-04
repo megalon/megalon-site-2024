@@ -1,7 +1,7 @@
 import './style.css'
 
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
-const projectsListItems = document.querySelectorAll("#projects-list ul")
+const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list ul")
 
 window.addEventListener("hashchange", loadContentFromHash)
 window.addEventListener("load", loadContentFromHash)
@@ -40,4 +40,10 @@ projectsListItems.forEach(item => {
       window.location.hash = hash
     }
   });
+  item.addEventListener("mouseover", async (event) => {
+    item.classList.add("hover")
+  })
+  item.addEventListener("mouseleave", async (event) => {
+    item.classList.remove("hover")
+  })
 })

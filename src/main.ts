@@ -1,6 +1,7 @@
 import './style.css'
 import './tabs.css'
 import './video.css'
+import { delay } from './utils'
 
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
 const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list ul")
@@ -10,6 +11,10 @@ window.addEventListener("load", loadContentFromHash)
 
 async function loadContentFromHash() {
   const page = window.location.hash.substring(1)
+
+  contentDiv.style.opacity = "0"
+
+  await delay(500)
 
   if (!page) {
     console.log("No page selected")
@@ -22,6 +27,7 @@ async function loadContentFromHash() {
     if (response.ok) {
       const text = await response.text()
       contentDiv.innerHTML = text
+      contentDiv.style.opacity = "1"
     } else {
       console.log(response.status)
       contentDiv.innerHTML = "Work in progress! Please select another project"

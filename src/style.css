@@ -59,6 +59,14 @@ a {
   opacity: 1;
 }
 
+#content img {
+  width: 100%;
+}
+
+#content .project {
+  padding-bottom: 3rem;
+}
+
 #left .floating-box {
   padding-right: 1rem;
   padding-left: 1rem;

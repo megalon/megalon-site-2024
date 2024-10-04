@@ -1,23 +1,43 @@
 import './style.css'
-// import typescriptLogo from './typescript.svg'
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.ts'
 
-const contentDiv = document.querySelector<HTMLDivElement>('#content')
+const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
+const projectsListItems = document.querySelectorAll("#projects-list ul")
 
-load_page('graffiti-game')
-load_page('color-beluga')
+window.addEventListener("hashchange", loadContentFromHash)
+window.addEventListener("load", loadContentFromHash)
 
-function load_page(page_url: string) {
-  var xmlHttp = new XMLHttpRequest();
+async function loadContentFromHash() {
+  const page = window.location.hash.substring(1)
 
-  xmlHttp.onreadystatechange = function() {
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-      {
-        contentDiv!.innerHTML = xmlHttp.responseText;
-      }
-  };
+  if (!page) {
+    console.log("No page selected")
+    contentDiv.innerHTML = "hello, please select a project on the left"
+    return
+  }
 
-  xmlHttp.open("GET", page_url + ".html", true); // true for asynchronous
-  xmlHttp.send(null);
+  try {
+    const response = await fetch(`/${page}.html`)
+    if (response.ok) {
+      const text = await response.text()
+      contentDiv.innerHTML = text
+    } else {
+      console.log(response.status)
+      contentDiv.innerHTML = "Work in progress! Please select another project"
+    }
+  } catch (error) {
+    console.log(error)
+  }
 }
+
+// Setup listeners for projects in list
+projectsListItems.forEach(item => {
+  item.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const hash = item.getAttribute("href")
+
+    if (hash) {
+      window.location.hash = hash
+    }
+  });
+})

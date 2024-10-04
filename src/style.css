@@ -39,10 +39,6 @@ body {
   border-right: 0.1rem solid #000;
 }
 
-#content {
-
-}
-
 .heading {
   display:flex;
   flex-direction: row;
@@ -69,15 +65,7 @@ body {
   margin: 0;
 }
 
-#projects-list table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-
-  border-top: 0.1rem solid #000;
-}
-
-#projects-list table tr {
+#projects-list ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -87,17 +75,21 @@ body {
   border-bottom: 0.1rem solid #000;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+  list-style-type: none;
 }
 
-#projects-list table td:nth-child(1) {
+#projects-list ul li:nth-child(1) {
   width: 60%; /* First column width */
+  padding-right: 1rem;
 }
 
-#projects-list table td:nth-child(2) {
+#projects-list ul li:nth-child(2) {
   width: 30%; /* Second column width */
+  padding-right: 1rem;
 }
 
-#projects-list table td:nth-child(3) {
+#projects-list ul li:nth-child(3) {
   width: 10%; /* Third column width */
   text-align: right;
 }

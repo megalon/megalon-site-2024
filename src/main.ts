@@ -3,20 +3,21 @@ import './style.css'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './counter.ts'
 
-load_page('graffiti-game.html',"Multiplayer Graffiti Game", "2024")
+const contentDiv = document.querySelector<HTMLDivElement>('#content')
 
-function load_page(page_url: string, title: string, date: string) {
-    var xmlHttp = new XMLHttpRequest();
+load_page('graffiti-game')
+load_page('color-beluga')
 
-    xmlHttp.onreadystatechange = function() {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-        {
-          document.querySelector<HTMLDivElement>('#content')!.innerHTML = xmlHttp.responseText;
-          document.querySelector<HTMLDivElement>("#right .heading .project-name")!.innerHTML = title
-          document.querySelector<HTMLDivElement>("#right .heading .project-date")!.innerHTML = date
-        }
-    };
+function load_page(page_url: string) {
+  var xmlHttp = new XMLHttpRequest();
 
-    xmlHttp.open("GET", page_url, true); // true for asynchronous
-    xmlHttp.send(null);
-  }
+  xmlHttp.onreadystatechange = function() {
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+      {
+        contentDiv!.innerHTML = xmlHttp.responseText;
+      }
+  };
+
+  xmlHttp.open("GET", page_url + ".html", true); // true for asynchronous
+  xmlHttp.send(null);
+}

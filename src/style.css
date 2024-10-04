@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-wrap: break-word;
 }
 
 html, body {
@@ -45,10 +46,17 @@ a {
 
   display: flex;
   flex-direction: column;
+  padding-right: 0;
 }
 
 #right {
   overflow-y: auto;
+}
+
+#left .floating-box {
+  margin-right: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #000;
 }
 
 .heading {
@@ -65,10 +73,9 @@ a {
 }
 
 #projects-list {
-  border-top: 0.1rem solid #000;
   height: 100%;
+  padding-right: 1rem;
   overflow-y: auto;
-  margin-top: 1rem;
 }
 
 .projects-heading {
@@ -90,17 +97,17 @@ a {
 }
 
 #projects-list ul li:nth-child(1) {
-  width: 60%; /* First column width */
+  width: 60%;  
   padding-right: 1rem;
 }
 
 #projects-list ul li:nth-child(2) {
-  width: 30%; /* Second column width */
+  width: 30%;
   padding-right: 1rem;
 }
 
 #projects-list ul li:nth-child(3) {
-  width: 10%; /* Third column width */
+  width: 10%;
   text-align: right;
 }
 

@@ -3,6 +3,7 @@ import './tabs.css'
 import './video.css'
 import { delay } from './utils'
 
+const rightDiv = document.querySelector<HTMLDivElement>('#right') as HTMLDivElement
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
 const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list ul")
 const homeButtonDiv = document.querySelector<HTMLDivElement>(".home-button")
@@ -22,8 +23,7 @@ async function loadContent() {
 
   if (!page) {
     console.log("No page selected")
-    contentDiv.innerHTML = "hello, please select a project on the left"
-    contentDiv.style.opacity = "1"
+    setContent("hello, please select a project on the left")
     return
   }
 
@@ -31,15 +31,20 @@ async function loadContent() {
     const response = await fetch(`/${page}.html`)
     if (response.ok) {
       const text = await response.text()
-      contentDiv.innerHTML = text
-      contentDiv.style.opacity = "1"
+      setContent(text)
     } else {
       console.log(response.status)
-      contentDiv.innerHTML = "Work in progress! Please select another project"
+      setContent("Work in progress! Please select another project")
     }
   } catch (error) {
     console.log(error)
   }
+}
+
+function setContent(text:string) {
+  contentDiv.innerHTML = text
+  rightDiv.scrollTo(0, 0)
+  contentDiv.style.opacity = "1"
 }
 
 // Setup listeners for projects in list

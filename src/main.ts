@@ -19,12 +19,11 @@ async function loadContentFromHash() {
 }
 
 async function loadContent() {
-  const page = window.location.hash.substring(1)
+  let page = window.location.hash.substring(1)
 
   if (!page) {
     console.log("No page selected")
-    setContent("hello, please select a project on the left")
-    return
+    page = 'about'
   }
 
   try {

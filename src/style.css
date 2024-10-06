@@ -154,6 +154,11 @@ p {
   padding-bottom: 1rem;
 }
 
+.pfp {
+  max-width: 6rem;
+  border-radius: 100%;
+}
+
 /* dark theme*/
 /* :root {
   color-scheme: dark;

@@ -1,16 +1,35 @@
 #left .tabs {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:left;
     color: rgb(145, 145, 145);
-    margin-top: 1rem;
+    /* margin-top: 4rem; */
+    position: relative;
+    top: 2rem;
+    background-color: #e6e6e6;
 }
 
 .tabs .hover {
     color: #363636;
-    background-color: unset;
+    top: 1.4rem;
 }
 
 .tabs .is-active {
     color: #363636;
+    z-index: 20;
+    top: 0.5rem;
+    transition: top 0.1s cubic-bezier(.5,0,0,2) 0s;
+    background-color: #c7c7c7;
+    /* border: 0.1rem solid #000; */
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    z-index: 9;
+    top: 1.6rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    transition: top 0.25s cubic-bezier(.5,0,0,2) 0s;
+    /* border: 0.1rem solid rgb(145, 145, 145); */
 }

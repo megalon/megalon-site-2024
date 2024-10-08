@@ -6,8 +6,8 @@
 
 html, body {
   height: 100%;
-  overflow-y: hidden;
   background-color: #e6e6e6;
+  overflow-x: hidden;
 }
 
 :root {
@@ -31,8 +31,8 @@ html, body {
 
 body {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 a {
@@ -46,7 +46,7 @@ a {
 
 #left {
   min-width: 24rem;
-  width: 33%;
+  width: 100%;
   border-right: 0.1rem solid #000;
 
   display: flex;
@@ -55,10 +55,6 @@ a {
   padding-left: 0;
   padding-right: 0;
   z-index: 1;
-}
-
-#right {
-  overflow-y: auto;
 }
 
 #content {
@@ -173,20 +169,19 @@ p {
 }
 
 /* mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   html {
-    overflow-y: unset;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
   body {
-    flex-direction: column;
-    overflow-y: unset;
+    overflow-y: hidden;
+    flex-direction: row;
   }
   #left {
-    width: 100%;
+    width: 33%;
   }
   #right {
-    overflow-y: unset;
+    overflow-y: auto;
   }
 }
 

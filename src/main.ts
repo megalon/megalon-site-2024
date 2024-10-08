@@ -9,15 +9,7 @@ const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list
 const homeButtonDiv = document.querySelector<HTMLDivElement>(".home-button")
 
 window.addEventListener("hashchange", loadContentFromHash)
-window.addEventListener("load", loadDefaultPage)
-
-async function loadDefaultPage() {
-  const text = await loadContent(undefined)
-  
-  if (text) {
-    setContent(text)
-  }
-}
+window.addEventListener("load", loadContentFromHash)
 
 async function loadContentFromHash() {
   contentDiv.style.opacity = "0"

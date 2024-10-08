@@ -2,8 +2,35 @@
     <div class="name">Vega (Nickelodeon All-Star Brawl)</div>
     <div class="date">2023</div>
 </div>
-<img src="images/3d-models/vega-portrait.png">
-<img src="images/3d-models/vega-model.jpg">
+<video poster="" autoplay loop muted width="100%">
+    <source src="videos/vega-nasb.mp4" type="video/mp4">
+</video>
 <p>
-    Vega is a character from My Life as a Teenage Robot. I made this Vega model as a model swap for Jenny in Nickelodeon All-Star Brawl!
+    This is a model swap for Nickelodeon All-Star Brawl!
+</p>
+<p>
+    NASB features Jenny Wakeman from the TV show My Life as a Teenage Robot. Vega is sort of a parallel reality version of Jenny
+    that lives on a different planet. Her design is similar, but more bug-like!
+</p>
+<img style="padding: 0" src="images/3d-models/vega-and-jenny.jpg">
+<img style="padding: 0" src="images/3d-models/vega-model.jpg">
+<img src="images/3d-models/vega-vs-jenny.jpg">
+<p>
+    My custom Vega model  vs Jenny's official model (right).
+</p>
+<p>
+    This character swap was very difficult. Jenny's original model has many different parts, and a complex rig.
+</p>
+<img src="images/3d-models/vega-vs-jenny-rigs.jpg">
+<p>
+    The biggest challenge was figuring out how to get the model to import correctly into the game. The order of the bones must match
+    what the game is expecting. Blender exports bones in alphabetical order, but the game's models weren't made in
+    Blender!
+</p>
+<p>
+    I had to write a C# script to rearrange the bones on import, and another to show the bone order in the inspector to verify it was working.
+</p>
+<img src="images/3d-models/vega-unity.jpg">
+<p>
+    The model was designed for Steven's <a href=https://github.com/DeadlyKitten/AltSkinsRehydrated>Alt Skins Rehydrated</a> mod. I used his template Unity project and skin export script to create the Unity AssetBundle loaded into the game!
 </p>

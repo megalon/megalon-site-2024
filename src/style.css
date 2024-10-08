@@ -172,6 +172,24 @@ p {
   border-radius: 100%;
 }
 
+/* mobile */
+@media only screen and (max-width: 768px) {
+  html {
+    overflow-y: unset;
+    overflow-x: hidden;
+  }
+  body {
+    flex-direction: column;
+    overflow-y: unset;
+  }
+  #left {
+    width: 100%;
+  }
+  #right {
+    overflow-y: unset;
+  }
+}
+
 /* dark theme*/
 /* :root {
   color-scheme: dark;

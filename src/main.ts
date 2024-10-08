@@ -5,7 +5,6 @@ import { delay } from './utils'
 
 const rightDiv = document.querySelector<HTMLDivElement>('#right') as HTMLDivElement
 const contentDiv = document.querySelector<HTMLDivElement>('#content') as HTMLDivElement
-const projectsListItems = document.querySelectorAll<HTMLElement>("#projects-list ul")
 const homeButtonDiv = document.querySelector<HTMLDivElement>(".home-button")
 
 window.addEventListener("hashchange", loadContentFromHash)
@@ -47,6 +46,6 @@ function setContent(text:string) {
   contentDiv.style.opacity = "1"
 }
 
-homeButtonDiv?.addEventListener("click", async (event) => {
+homeButtonDiv?.addEventListener("click", async () => {
   window.location.hash = ""
 })

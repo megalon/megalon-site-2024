@@ -6,7 +6,8 @@
 
 html, body {
   height: 100%;
-  overflow-y: hidden;
+  background-color: #e6e6e6;
+  overflow-x: hidden;
 }
 
 :root {
@@ -16,7 +17,6 @@ html, body {
   font-weight: 400;
 
   color: #363636;
-  background-color: #e6e6e6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +24,15 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  color: white;
+  background-color: black;
+}
+
 body {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 a {
@@ -40,18 +45,16 @@ a {
 }
 
 #left {
-  min-width: 33%;
-  max-width: 33%;
+  min-width: 24rem;
+  width: 100%;
   border-right: 0.1rem solid #000;
 
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   padding-left: 0;
   padding-right: 0;
-}
-
-#right {
-  overflow-y: auto;
+  z-index: 1;
 }
 
 #content {
@@ -60,7 +63,9 @@ a {
 }
 
 #content img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 40rem;
+  padding-bottom: 1rem;
 }
 
 #content .project {
@@ -71,7 +76,8 @@ a {
   padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 0.1rem solid #000;
+  /* border-bottom: 0.1rem solid #000; */
+  z-index: 2;
 }
 
 .home-button {
@@ -94,6 +100,9 @@ a {
 #projects-list {
   height: 100%;
   overflow-y: auto;
+  z-index: 10;
+  background-color: #e6e6e6;
+  border-top: 0.1rem solid black;
 }
 
 .projects-heading {
@@ -123,7 +132,7 @@ a {
 }
 
 .hover {
-  background-color: #c7c7c7;
+  background-color: #dbdbdb;
 }
 
 #projects-list ul li {
@@ -157,6 +166,23 @@ p {
 .pfp {
   max-width: 6rem;
   border-radius: 100%;
+}
+
+/* mobile */
+@media only screen and (min-width: 768px) {
+  html {
+    overflow-y: hidden;
+  }
+  body {
+    overflow-y: hidden;
+    flex-direction: row;
+  }
+  #left {
+    width: 33%;
+  }
+  #right {
+    overflow-y: auto;
+  }
 }
 
 /* dark theme*/

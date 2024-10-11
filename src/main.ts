@@ -1,3 +1,5 @@
+import './dark-theme.scss'
+import './light-theme.scss'
 import './style.scss'
 import './tabs.scss'
 import './video.scss'

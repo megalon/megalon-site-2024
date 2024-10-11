@@ -13,6 +13,10 @@ $border-color: #45454e;
         border-color: $border-color;
     }
 
+    path {
+        fill: $text;
+    }
+
     html,
     body,
     #projects-list {

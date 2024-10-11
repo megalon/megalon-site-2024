@@ -33,7 +33,7 @@ export async function loadContent(htmlFile: string | undefined) {
       return text
     } else {
       console.log(response.status)
-      return "Work in progress! Please select another project"
+      return "Please select a project from the list!"
     }
   } catch (error) {
     console.log(error)

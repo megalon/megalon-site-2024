@@ -5,6 +5,7 @@ $tab-hover: #363636;
 $active-background: #c7c7c7;
 $active-text: #363636;
 $border-color: #000000;
+$video-sidewall-color: #bababa;
 
 @media (prefers-color-scheme: light) {
 
@@ -34,5 +35,9 @@ $border-color: #000000;
     .is-active {
         color: $active-text;
         background-color: $active-background;
+    }
+
+    .sidewall {
+        background-color: $video-sidewall-color;
     }
 }

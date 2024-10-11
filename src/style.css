@@ -168,7 +168,7 @@ p {
   border-radius: 100%;
 }
 
-/* mobile */
+/* desktop */
 @media only screen and (min-width: 768px) {
   html {
     overflow-y: hidden;

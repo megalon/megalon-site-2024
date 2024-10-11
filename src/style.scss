@@ -2,12 +2,7 @@
   margin: 0;
   padding: 0;
   overflow-wrap: break-word;
-}
-
-html, body {
-  height: 100%;
-  background-color: #e6e6e6;
-  overflow-x: hidden;
+  color: #363636;
 }
 
 :root {
@@ -16,12 +11,18 @@ html, body {
   line-height: 1.5;
   font-weight: 400;
 
-  color: #363636;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+}
+
+html, body {
+  height: 100%;
+  background-color: #e6e6e6;
+  overflow-x: hidden;
 }
 
 ::selection {

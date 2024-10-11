@@ -1,6 +1,6 @@
-import './style.css'
-import './tabs.css'
-import './video.css'
+import './style.scss'
+import './tabs.scss'
+import './video.scss'
 import { delay } from './utils'
 
 const rightDiv = document.querySelector<HTMLDivElement>('#right') as HTMLDivElement

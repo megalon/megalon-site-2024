@@ -168,6 +168,19 @@ p {
   font-style: italic;
 }
 
+.video-container {
+  padding-bottom: 1rem;
+}
+
+iframe {
+  padding-bottom: 1rem;
+}
+
+h4 {
+  margin-top: 4rem;
+}
+
+
 /* desktop */
 @media only screen and (min-width: 768px) {
   html {

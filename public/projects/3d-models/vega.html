@@ -5,32 +5,37 @@
 <video poster="" autoplay loop muted width="100%">
     <source src="videos/vega-nasb.mp4" type="video/mp4">
 </video>
-<p>
-    This is a model swap for Nickelodeon All-Star Brawl!
+<p class="blurb">
+    A complex model swap for Nickelodeon All-Star Brawl!
 </p>
 <p>
-    NASB features Jenny Wakeman from the TV show My Life as a Teenage Robot. Vega is sort of a parallel reality version of Jenny
-    that lives on a different planet. Her design is similar, but more bug-like!
+    This project required a significant amount of research and trial and error. Nickelodeon All-Star Brawl (NASB) does
+    not support model swaps, and Vega is swapped onto a character with the most complex rig in the game, Jenny Wakeman
+    (XJ-9).
+</p>
+<p>
+    Jenny Wakeman (XJ-9) is from the TV show My Life as a Teenage Robot. Vega is sort of a parallel reality version of
+    Jenny that lives on a different planet. Her design is similar, but more bug-like!
 </p>
 <img style="padding: 0" src="images/3d-models/vega-and-jenny.jpg">
 <img style="padding: 0" src="images/3d-models/vega-model.jpg">
 <img src="images/3d-models/vega-vs-jenny.jpg">
 <p>
-    My custom Vega model  vs Jenny's official model (right).
-</p>
-<p>
-    This character swap was very difficult. Jenny's original model has many different parts, and a complex rig.
+    My custom Vega model (left) vs Jenny's official model (right). Jenny vs Jenny!
 </p>
 <img src="images/3d-models/vega-vs-jenny-rigs.jpg">
 <p>
-    The biggest challenge was figuring out how to get the model to import correctly into the game. The order of the bones must match
-    what the game is expecting. Blender exports bones in alphabetical order, but the game's models weren't made in
-    Blender!
+    The biggest challenge was figuring out how to get the model to import correctly into the game. The order of the
+    bones must match what the game is expecting. Blender exports bones in alphabetical order, but the game's models
+    weren't made in Blender!
 </p>
 <p>
-    I had to write a C# script to rearrange the bones on import, and another to show the bone order in the inspector to verify it was working.
+    I had to write a C# script to rearrange the bones on import, and another to show the bone order in the inspector to
+    verify it was working.
 </p>
 <img src="images/3d-models/vega-unity.jpg">
 <p>
-    The model was designed for Steven's <a href=https://github.com/DeadlyKitten/AltSkinsRehydrated>Alt Skins Rehydrated</a> mod. I used his template Unity project and skin export script to create the Unity AssetBundle loaded into the game!
+    Finally, I used Steven's <a href=https://github.com/DeadlyKitten/AltSkinsRehydrated>Alt Skins
+        Rehydrated</a> template Unity project and skin export script to create the Unity AssetBundle that the mod loads
+    into the game!
 </p>

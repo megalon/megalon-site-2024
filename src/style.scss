@@ -97,6 +97,18 @@ a {
   margin-bottom: 1rem;
 }
 
+.heading .name {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+}
+
+.heading .wip {
+  padding-left: 0.25rem;
+  font-style: italic;
+}
+
 #projects-list {
   height: 100%;
   overflow-y: auto;
@@ -178,6 +190,10 @@ iframe {
 
 h4 {
   margin-top: 4rem;
+}
+
+ul {
+  margin-left: 1rem;
 }
 
 

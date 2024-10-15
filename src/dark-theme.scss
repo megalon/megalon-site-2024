@@ -7,6 +7,7 @@ $active-background: #6e737c;
 $active-text: #000000;
 $border-color: #45454e;
 $video-sidewall-color: #1c1c1e;
+$accent-color: #3a96cb;
 
 @media (prefers-color-scheme: dark) {
 
@@ -52,5 +53,9 @@ $video-sidewall-color: #1c1c1e;
 
     .sidewall {
         background-color: $video-sidewall-color;
+    }
+
+    .wip {
+        color: $accent-color;
     }
 }

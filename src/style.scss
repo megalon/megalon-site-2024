@@ -200,6 +200,58 @@ ul {
   margin-left: 1rem;
 }
 
+.wiggle-container {
+  display: flex;
+}
+
+.wiggle {
+  display: flex;
+  position: relative;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.wiggle div{
+  top: -0.33rem;
+  position: relative;
+  animation-name: wiggle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes wiggle {
+  0% { top: -0.33rem; }
+  100% { top: 0.33rem; }
+}
+
+/* 
+Yes this is silly, but we don't have proper loops in css yet
+Use negative delay so they move before the pages loads.
+Use reverse order to make the first character lead
+*/
+.wiggle div:nth-child(1) { animation-delay: -.7s }
+.wiggle div:nth-child(2) { animation-delay: -.6s }
+.wiggle div:nth-child(3) { animation-delay: -.5s }
+.wiggle div:nth-child(4) { animation-delay: -.4s }
+.wiggle div:nth-child(5) { animation-delay: -.3s }
+.wiggle div:nth-child(6) { animation-delay: -.2s }
+.wiggle div:nth-child(7) { animation-delay: -.1s }
+.wiggle div:nth-child(8) { animation-delay: 0s }
+
+.strobe {
+  animation-name: strobe;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes strobe {
+  0% { color: white; }
+  100% { color: #3a96cb; }
+}
 
 /* desktop */
 @media only screen and (min-width: 768px) {

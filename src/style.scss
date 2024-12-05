@@ -172,8 +172,16 @@ p {
 }
 
 .pfp {
-  max-width: 6rem;
+  max-height: 10rem;
   border-radius: 100%;
+  border-style: solid;
+  border-width: 0.2rem;
+  padding-bottom: 0;
+}
+
+#content img.pfp {
+  max-height: 10rem;
+  padding-bottom: 0;
 }
 
 .blurb {

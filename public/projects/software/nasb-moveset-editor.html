@@ -1,0 +1,20 @@
+<div class="heading">
+    <div class="name">NASB Moveset Editor</div>
+    <div class="date">2021</div>
+</div>
+<img src="images/nasb-moveset-editor.png">
+<p class="blurb">
+    A graphical moveset editor for Nickelodeon All-Star Brawl!
+</p>
+<p>
+    This project allows anyone to view, edit, and export custom movesets for characters in Nickelodeon All-Star Brawl! It is built with C# as a custom Unity Editor window, running inside the Unity Editor.
+</p>
+<p>
+    NASB is a fighting game with moveset data stored in a custom format called "Bulkserialized". This data includes frame timings, hitbox information, FX triggers, etc. The custom format is first parsed by an external library called NASB Moveset Parser made by Steven. My moveset editor presents this data in a node based graph, and includes many quality of life features to make editing easier.
+</p>
+<p>
+    There are over 150 nodes that can be placed in the graph. Each node has it's own file, containing information about it's inputs, outputs, and variables that the user can edit. In order to generate all of these nodes, I wrote a converter that took the files from NASB Moveset Parser and converted them to the XNode format I am using in the editor.
+</p>
+<p>
+    <a href="https://github.com/megalon/nasb-moveset-editor">GitHub</a>
+</p>

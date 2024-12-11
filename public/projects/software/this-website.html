@@ -1,0 +1,45 @@
+<div class="heading">
+    <div class="name">This Website</div>
+    <div class="date">2024</div>
+</div>
+<!-- <p class="blurb">
+</p> -->
+<p>
+    I made this website. I did not use a site generator or any front-end libraries like React of Vue.
+</p>
+<p>
+    I decided to write my own page loader to learn how they work.
+</p>
+<h2>goals</h2>
+<ul>
+    <li>A simple, single page site that loads quickly</li>
+    <li>Fast iteration when editing (hot-reload)</li>
+    <li>Reactive CSS for small and large screen sizes</li>
+    <li>Light and Dark themes that match system settings</li>
+    <li>Easy to understand URLs</li>
+</ul>
+<br>
+<h2>development</h2>
+<p> 
+    The site is built using Typescript, SCSS, and HTML. I used Vite to handle builds and hot-reloading.
+</p>
+<p>
+    There is only one main page, but the data for each project "page" is split into separate HTML files. Often when navigating a website the whole page reloads when the URL changes, and this can cause the page to flash white in some browsers. I am able to avoid this by loading the data for each project into the main page, even though the URL changes.
+</p>
+<h2>styling</h2>
+<p>
+    This design of this website is inspired by '70s instruction manuals. Simple, stark, monospaced text on a plain background.
+</p>
+<p>
+    SCSS allowed me to create reusable variables for the colors on the page, which drastically simplified the light and dark themes.
+</p>
+<h2>deployment</h2>
+<p>
+    The site is run from a small Linux server that I administer. It is served with NGINX and routed through Cloudflare.
+</p>
+<p>
+    In the future I would like to create automatic builds of a Docker container on GitHub, and auto deployment to the server. In practice this feels unnecessary at this time.
+</p>
+<p>
+    <a href="https://github.com/megalon/megalon-site-2024">GitHub</a>
+</p>
